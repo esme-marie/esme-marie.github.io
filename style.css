@@ -405,12 +405,12 @@ ul li a:hover{
 	display: flex;
 	position: absolute;
 	top: 5%;
-	left: 41%;
+	left: 36.75%;
 }
 .footer-link{
   color: #11999E;
   font-family: 'Baloo Chettan 2', cursive;
-  margin: 15px 12px;
+  margin: 15px;
   text-decoration: none;
   font-size: 20px;
 }
