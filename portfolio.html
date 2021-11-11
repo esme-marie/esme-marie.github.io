@@ -1,122 +1,244 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Esme-Marie</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Baloo+Chettan+2|Tangerine&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Esme-Marie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.css">
+  <link rel="stylesheet" type="text/css" href="output.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Baloo+Chettan+2|Tangerine&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/logo.png">
 </head>
+
 <body>
-    <header>
-        <img class="logo" src="img/logo.png">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="portfolio.html">Portfolio</a></li>
-                <li><a href="https://www.rebound.asia/breakthrough/cohort" target="_blank">Profile</a></li>
-                <li><a href="https://drive.google.com/file/d/1NSCfvsHf7c-vsDNV9Sq63UWASg-BPM75/view?usp=sharing" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="top-container">
-        <img id="top-cloud" src="img/cloud.png" alt="cloud" width="222">
-        <div class="Intro">
-            <h1>My Projects</h1><br/>
-            <p id="p1">Check out some of my work 💻✨</p> 
+  <div class="container max-w-max mx-auto">
+
+    <!-- HEADER -->
+
+    <div id="header" class="flex justify-between items-center py-4 bg-sky-blue">
+      <div class="flex-shrink-0 ml-10">
+        <img class="w-20" src="images/logo.png" />
+      </div>
+      <!-- SIDE PAGE NAVIGATION -->
+      <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="https://drive.google.com/file/d/12skAWjmJ0XOcyfHEnKiWv9kghHJNJjEZ/view?usp=sharing" target="_blank">Resume</a>
+        <a href="https://drive.google.com/drive/folders/1wrNNoOBfF83XluJUT2VtiD4AcAFNSHLC?usp=sharing" target="_blank">Certificates</a>
+      </div>
+      <i class="fas fa-bars fa-2x visible md:invisible mr-10 md:mr-0 text-black cursor-pointer hover:text-white"
+        onclick="openNav()"></i>
+      <!-- PAGE NAVIGATION -->
+      <ul id="topnav" class="hidden md:flex overflow-x-hidden mr-10 text-xl">
+        <li class="mr-6 p-1">
+          <a class="text-black hover:text-white" href="index.html">Home</a>
+        </li>
+        <li class="mr-6 p-1 border-b-2 border-yellow-500">
+          <a class="text-teal-blue cursor-default" href="#">Portfolio</a>
+        </li>
+        <li class="mr-6 p-1">
+          <a class="text-black hover:text-white" href="https://drive.google.com/file/d/12skAWjmJ0XOcyfHEnKiWv9kghHJNJjEZ/view?usp=sharing" target="_blank">Resume</a>
+        </li>
+        <li class="mr-6 p-1">
+          <a class="text-black hover:text-white" href="https://drive.google.com/drive/folders/1wrNNoOBfF83XluJUT2VtiD4AcAFNSHLC?usp=sharing" target="_blank">Certificates</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- INTRO -->
+    
+    <div id="intro" class="top-container flex items-center justify-center bg-fixed bg-sky-blue custom-img">
+      <div id="welcome" class="px-2.5 absolute inset-x-0 top-12">
+        <h1 class="font-tangerine font-semibold text-teal-blue text-8xl text-center">My Projects</h1>
+        <p class="font-baloo text-gray-700 text-2xl text-center my-4">Check out some of my work 💻<span class="animate-ping-slow">✨</span></p>
+      </div>
+      <img id="top-cloud" class="right-0 sm:right-20 absolute top-1 w-60 animate-pulse" src="images/cloud.png"
+        alt="cloud">
+      <img id="left-cloud" class="-left-0 sm:left-40 absolute left-20 top-1/4 w-64 animate-pulse"
+        src="images/cloud.png" alt="cloud">
+      <img id="bottom-cloud" class="absolute right-1 sm:right-1/4 top-1/2 w-72 animate-pulse" src="images/cloud.png"
+        alt="cloud">
+      <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+
+    <!-- CONTENTS -->
+
+    <div id="contents" class="py-20 bg-white">
+      <div class="flex justify-center flex-wrap px-8">
+        <!-- WHAT HAVE I BEEN UP TO? -->
+        <div id="aboutme" class="text-center">
+          <div class="font-baloo text-teal-blue text-4xl grid grid-cols-1 lg:grid-cols-4 gap-2">
+            <h2 class="text-center lg:text-right col-start-1 lg:col-start-2">What Have I</h2>
+            <h2 class="text-center lg:text-left col-start-1 lg:col-start-3">Been Up To?</h2>
+          </div>
+          <p class="font-sans text-justify-center lg:text-justify text-lg px-8 lg:px-44 py-10">
+            I have adapted to continuous learning to stay agile by taking tech related courses online such as 
+            Artificial Intelligence and Blockchain which I have included my certifications <a href="https://drive.google.com/drive/folders/1wrNNoOBfF83XluJUT2VtiD4AcAFNSHLC?usp=sharing" target="_blank" style="text-decoration: none; color: salmon;">here</a>. 
+            I am presently enrolled in HarvardX CS50's Introduction to Computer Science on edX.
+            Here are some of my personal & collaboration work. For more code details, please visit me on 
+            <a href="https://github.com/esme-marie" target="_blank" style="text-decoration: none; color: salmon;">Github</a>.
+          </p>
         </div>
-        <img id="bottom-cloud" src="img/cloud.png" alt="cloud" width="268">
-        <img id="mountain" src="img/mountain.png" alt="mountain-img">
-        <div class="bubbles">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-        </div>
-    </div>  
-    <div class="middle-container">
-        <div class="profile">
-            <img class="midlogo" src="img/magic.png" alt="magic">
-            <h2>What have I been up to?</h2>
-            <p class="p2">I have adapted to continuous learning to stay agile by taking Tech related courses online like Artificial Intelligence and Blockchain. Here are some of my personal & collaboration work. For more code details, please visit me on <a class="projectslink" href="https://github.com/esme-marie" target="_blank" style="text-decoration: none; color: salmon;">Github</a>.</p>
-        </div> 
-        <div class="project1">
-            <div class="content">
-                <img class="project_img" src="img/project1.png">
-                <h2 class="head">VicTrees Vs. Deforestation</h2>
-                <h3 class="head3">React | Node/ExpressJS | ThreeJS | Bootstrap | Leaftlet | Global Forest Watch | Instagram | New Relic | Heroku</h3>
-                <p class="p3">A collaborative web application project to create awareness and actionable steps towards combating deforestation. Our team entered Hack the Planet Contest with <a href="https://www.therelicans.com/lilliantoh/victrees-fight-deforestation-victoriously-1bc1" target="_blank" style="text-decoration: none;">'VicTrees fight Deforestation Victoriously'</a> and won <a href="https://www.therelicans.com/therelicans/hack-the-planet-contest-winners-announced-22po" target="_blank" style="text-decoration: none;">runner-up</a> in the New Relic Hackathon!</p>
-                <a class="mainbtn" href="https://victreesfightdeforestation.herokuapp.com/" target="_blank">View</a>
+        <!-- PROJECTS -->
+        <div id="projects" class="divide-y text-center bg-yellow-100 rounded-lg px-4 py-0 lg:py-4">
+          <div id="dinos">
+            <div class="flex flex-col items-center w-full lg:w-1/2 mx-auto pt-8">
+              <div class="relative h-0 overflow-hidden max-w-full w-full pb-fluid-video">
+                <video class="absolute top-0 left-0 w-full h-full" controls>
+                  <source src="videos/What_Happened_to_the_Dinos.mp4" type="video/mp4">
+                  Your browser does not support HTML video.
+                </video>
+              </div>
             </div>
-        </div>
-        <div class="project2">
-            <div class="content">
-                <img class="project_img" src="img/project2.png">
-                <h2 class="head">Sejiwa - One Heart, One Soul</h2>
-                <h3 class="head3">Vue | Vuetify | Node/ExpressJS | MySQL | Firebase | Google Sign-In | Twitter | DonorBox | Stripe | PayPal</h3>
-                <p class="p3">A collaborative web application project for individuals or associations to create charity events and for individuals to sign-up as a volunteer.</p>
-                <a class="mainbtn btn2" href="https://youtu.be/VBIY07MDbIM" target="_blank">View</a>
+            <h2 class="font-baloo text-teal-blue text-4xl py-8">What Happened to the Dinos?</h2>
+            <h3 class="font-baloo text-gray-700 text-2xl px-8 lg:px-72">Scratch</h3>
+            <p class="font-sans text-justify-center lg:text-justify text-lg px-8 lg:px-80 py-8">
+              A project assignment early in the CS50 course, where students are free to choose any type of project but subject to requirements such as 
+              using at least two sprites, three scripts, one condition, one loop, one variable and one sound. 
+              I enjoyed building this informative and interactive animation plus a maze game for children on <a href="https://scratch.mit.edu/projects/585354443" target="_blank" style="text-decoration: none; color: salmon;">Scratch</a>. 
+            </p>
+          </div>
+          <div id="victrees">
+            <div class="flex flex-col items-center w-full lg:w-1/2 mx-auto pt-8">
+              <div class="relative h-0 overflow-hidden max-w-full w-full pb-fluid-video">
+                <img class="absolute top-0 left-0 w-full h-auto" src="images/victrees.png" alt="VictreesXDeforestation">
+              </div>
             </div>
-        </div>
-        <div class="project3">
-            <div class="content">
-                <img class="project_img" src="img/project3.png">
-                <h2 class="head">MySchoolAdmin - Grading MVP</h2>
-                <h3 class="head3">Vue | Bootstrap | ApexCharts | Node/ExpressJS | MySQL</h3>
-                <p class="p3">A minimum viable product(MVP) web application for teachers and school administrators to compile grades for student report cards. This is a work in progress with an extensive feature wish-list plan. Personally using this application for school administration work, at a private homeschool centre where I am a part-time volunteer.</p>
-                <a class="mainbtn btn3" href="https://youtu.be/Dai71GMYcWo" target="_blank">View</a>
+            <h2 class="font-baloo text-teal-blue text-4xl py-8">VicTrees Vs. Deforestation</h2>
+            <h3 class="font-baloo text-gray-700 text-2xl px-8 lg:px-72">React | Node/ExpressJS | ThreeJS | Bootstrap | Leaftlet | Global Forest Watch | Instagram | New Relic | Heroku</h3>
+            <p class="font-sans text-justify-center lg:text-justify text-lg px-12 lg:px-80 py-8">
+              A collaborative web application project to create awareness and actionable steps towards combating deforestation. 
+              Our team entered Hack the Planet Contest with 
+              <a href="https://www.therelicans.com/lilliantoh/victrees-fight-deforestation-victoriously-1bc1" target="_blank" style="text-decoration: none; color: salmon;">'VicTrees fight Deforestation Victoriously'</a> 
+              and won <a href="https://www.therelicans.com/therelicans/hack-the-planet-contest-winners-announced-22po" target="_blank" style="text-decoration: none; color: salmon;">runner-up</a> 
+              in the New Relic Hackathon!
+            </p>
+          </div>
+          <div id="sejiwa">
+            <div class="flex flex-col items-center w-full lg:w-1/2 mx-auto pt-8">
+              <div class="relative h-0 overflow-hidden max-w-full w-full pb-fluid-video">
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/VBIY07MDbIM?start=125" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-        </div>
-        <div class="project4">
-            <div class="content">
-                <img class="project_img" src="img/project4.png">
-                <h2 class="head">Calculator - Feature Extension</h2>
-                <h3 class="head3">React | Bootstrap</h3>
-                <p class="p3">A rent calculator for a property management web application called Avenue. This feature extension comes in handy for managers to prepare online tenancy agreements.</p>
-                <a class="mainbtn btn4" href="https://github.com/esme-marie/avenue" target="_blank">View</a>
+            <h2 class="font-baloo text-teal-blue text-4xl py-8">Sejiwa - One Heart, One Soul</h2>
+            <h3 class="font-baloo text-gray-700 text-2xl px-8 lg:px-72">Vue | Vuetify | Node/ExpressJS | MySQL | Firebase | Google Sign-In | Twitter | DonorBox | Stripe | PayPal</h3>
+            <p class="font-sans text-justify-center lg:text-justify text-lg px-12 lg:px-80 py-8">
+              A collaborative web application project for individuals or associations to create charity events and for individuals to sign-up as a volunteer.
+            </p>
+          </div>
+          <div id="myschooladmin">
+            <div class="flex flex-col items-center w-full lg:w-1/2 mx-auto pt-8">
+              <div class="relative h-0 overflow-hidden max-w-full w-full pb-fluid-video">
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/Dai71GMYcWo?start=9" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-        </div>
-        <div class="project5">
-            <div class="content">
-                <img class="project_img" src="img/project5.png">
-                <h2 class="head">Homework Todo App</h2>
-                <h3 class="head3">React | GraphQL | MongoDB | Material-UI</h3>
-                <p class="p3">A simple homework todo app built for my daughter; with current date and time display plus a link to Google Classroom Calendar of weekly assignments.</p>
-                <a class="mainbtn btn5" href="https://github.com/esme-marie/homework-todo" target="_blank">View</a>
+            <h2 class="font-baloo text-teal-blue text-4xl py-8">MySchoolAdmin - Grading MVP</h2>
+            <h3 class="font-baloo text-gray-700 text-2xl px-8 lg:px-72">Vue | Bootstrap | ApexCharts | Node/ExpressJS | MySQL</h3>
+            <p class="font-sans text-justify-center lg:text-justify text-lg px-12 lg:px-80 py-8">
+              A minimum viable product(MVP) web application for teachers and school administrators to compile grades for student report cards. 
+              This is a work in progress with an extensive feature wish-list plan. 
+              I am using this application personally for school administration work, at a private homeschool centre where I am a part-time volunteer.
+            </p>
+          </div>
+          <div id="calculator">
+            <div class="flex flex-col items-center w-full lg:w-1/2 mx-auto pt-8">
+              <div class="relative h-0 overflow-hidden max-w-full w-full pb-fluid-video">
+                <img class="absolute top-0 left-0 w-full h-auto" src="images/calculator.png" alt="VictreesXDeforestation">
+              </div>
             </div>
+            <h2 class="font-baloo text-teal-blue text-4xl py-8">Calculator - Feature Extension</h2>
+            <h3 class="font-baloo text-gray-700 text-2xl px-8 lg:px-72">React | Bootstrap</h3>
+            <p class="font-sans text-justify-center lg:text-justify text-lg px-12 lg:px-80 py-8">
+              A rent calculator for a property management web application called Avenue. 
+              This feature extension comes in handy for managers to prepare online tenancy agreements.
+            </p>
+          </div>
+          <div id="homework">
+            <div class="flex flex-col items-center w-full lg:w-1/2 mx-auto pt-8">
+              <div class="relative h-0 overflow-hidden max-w-full w-full pb-fluid-video">
+                <img class="absolute top-0 left-0 w-full h-auto" src="images/homework.png" alt="VictreesXDeforestation">
+              </div>
+            </div>
+            <h2 class="font-baloo text-teal-blue text-4xl py-8">Homework Todo App</h2>
+            <h3 class="font-baloo text-gray-700 text-2xl px-8 lg:px-72">React | GraphQL | MongoDB | Material-UI</h3>
+            <p class="font-sans text-justify-center lg:text-justify text-lg px-12 lg:px-80 py-8">
+              A simple homework todo app built for my daughter; 
+              with current date and time display plus a link to Google Classroom Calendar of weekly assignments.
+            </p>
+          </div>
         </div>
-        <div id="contact" class="contact-me">
-			<h2>Get In Touch</h2>
-			<h3>How can I help?</h3>
-			<p class="p2">I am keen on any remote web / mobile development job and also open to collaborative projects or internship.</p>
-            <p class="p2"> If you have an opportunity for me, please get in touch, thank you!</p>
-			<a class="btn" href="mailto:esmereldamarie@gmail.com">MESSAGE ME</a>
-		</div>
-    </div>    
-    <footer id="f">
-		<!-- <img class="flogo" src="img/logo.png"> -->
-		<div class="link">
-			<a class="footer-link" href="index.html">Home</a>
-            <a class="footer-link" href="portfolio.html">Portfolio</a>
-            <a class="footer-link" href="https://www.rebound.asia/breakthrough/cohort/" target="_blank">Profile</a>
-			<a class="footer-link"
-				href="https://drive.google.com/file/d/1NSCfvsHf7c-vsDNV9Sq63UWASg-BPM75/view?usp=sharing" target="_blank">Resume</a>
-		</div>
-		<div class="footer-social-icons">
-			<ul>
-				<li><a href="https://github.com/esme-marie" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.linkedin.com/in/esme-marie-m-sultan08/" target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-		<p class="copyright">© 2021 <a href="#" class="f-link">Esme-Marie.</a> All rights reserved.</p>
-	</footer>
-    <script type="text/javascript" src="main.js"></script>
+        <!-- CONTACT ME -->
+        <div id="contactme" class="text-center">
+          <h2 class="font-baloo text-teal-blue text-4xl py-8">Get In Touch</h2>
+          <h3 class="font-baloo text-gray-700 text-2xl">How can I help?</h3>
+          <p class="p2 font-sans text-lg px-8 md:px-40 py-8">
+            I am keen on any remote web / mobile development job and also open to collaborative projects or
+            internship.<br />
+            If you have an opportunity for me, please get in touch, thank you!
+          </p>
+          <!-- Message Me Button -->
+          <a id="message-button" class="btn btn-yellow font-baloo text-xl" href="mailto:esmereldamarie@gmail.com">MESSAGE ME</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <div id="footer" class="w-full bg-black">
+      <div class="flex flex-wrap text-center text-white">
+        <!-- FIND ME -->
+        <div id="findme" class="w-full lg:w-1/3 px-5 pb-0 pt-6 lg:pt-12 border-r border-gray-700">
+          <div class="flex justify-items-center flex-wrap grid grid-rows-2 lg:grid-cols-2">
+            <div class="my-6 text-xl font-semibold">FIND ME ON</div>
+            <div class="card-icons flex gap-4 mt-0 lg:mt-3">
+              <a href="https://github.com/esme-marie" target="_blank">
+                <i class="fab fa-github-square fa-3x card-icon text-yellow-500 hover:text-teal-blue"
+                  aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/esme-marie-m-sultan08/" target="_blank">
+                <i class="fab fa-linkedin fa-3x card-icon text-yellow-500 hover:text-teal-blue" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- PAGE NAVIGATION -->
+        <div id="bottomnav" class="w-full lg:w-1/3 px-5 pb-0 pt-5 lg:pt-11 border-r border-gray-700 text-lg">
+          <nav class="flex justify-center flex-wrap mt-2 lg:mt-6 mb-2 gap-4">
+            <div class="p-1 text-white hover:text-yellow-500 text-center cursor-pointer"><a href="index.html">Home</a></div>
+            <div class="p-1 border-b-2 border-yellow-500 text-teal-blue cursor-default">Portfolio</div>
+            <div class="p-1 text-white hover:text-yellow-500 text-center cursor-pointer"><a href="https://drive.google.com/file/d/12skAWjmJ0XOcyfHEnKiWv9kghHJNJjEZ/view?usp=sharing" target="_blank">Resume</a></div>
+            <div class="p-1 text-white hover:text-yellow-500 text-center cursor-pointer"><a href="https://drive.google.com/drive/folders/1wrNNoOBfF83XluJUT2VtiD4AcAFNSHLC?usp=sharing" target="_blank">Certificates</a></div>
+          </nav>
+        </div>
+        <!-- COPYRIGHT -->
+        <div id="copyright" class="w-full lg:w-1/3 px-5 pb-10 lg:pb-0 pt-5 lg:pt-11">
+          <div class="flex justify-center flex-wrap mt-4 lg:mt-8">
+            <p class="font-thin">© 2021 <a href="#" class="text-yellow-500 cursor-pointer">Esme-Marie.</a> All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("sidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("sidenav").style.width = "0";
+    }
+  </script>
 </body>
+
 </html>
