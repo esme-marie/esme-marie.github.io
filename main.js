@@ -9,5 +9,5 @@ function openNav() {
   function wait() {
     setTimeout(function(){
       history.go(0);
-    }, 2500);
+    }, 2000);
   }
