@@ -202,7 +202,3 @@
 .btn-yellow:hover {
     @apply bg-teal-blue;
 }
-
-.recent-project-list {
-    font-weight: bold;
-}
